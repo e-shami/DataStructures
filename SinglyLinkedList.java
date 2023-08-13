@@ -12,9 +12,9 @@ public class SinglyLinkedList<T> {
             return this.Next == null;
         }
 
-        boolean equals(Node other) {
-            return this.data == other.data;
-        }
+        // boolean equals(Node other) {
+        //     return this.data == other.data;
+        // }
 
         public String toString() {
             return this.data.toString();
@@ -87,7 +87,7 @@ public class SinglyLinkedList<T> {
 
     public void insert(int index, T data) {
         int totalItems = count();
-        if (index < 0 || index >= totalItems) {
+        if (isEmpty() || index < 0 || index >= totalItems) {
             throw new IndexOutOfBoundsException(index);
         }
 
